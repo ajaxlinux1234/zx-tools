@@ -1,12 +1,11 @@
 {
-  "name": "zx-tools",
+  "name": "@ajaxlinux/zx-tools",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
   },
-  "homepage": "https://vitejs.dev/",
+  "homepage": "https://github.com/ajaxlinux1234/zx-tools.git",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ajaxlinux1234/zx-tools.git"
