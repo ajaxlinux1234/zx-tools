@@ -1,0 +1,36 @@
+{
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [
+    "aliyun",
+    "cnname",
+    "codeadd",
+    "cpid",
+    "cpvideo",
+    "Cuid",
+    "dinnings",
+    "Emittery",
+    "enname",
+    "execa",
+    "inroomservice",
+    "inroomservicev",
+    "onwarn",
+    "popconfirm",
+    "Publicitypage",
+    "Serviceitem"
+  ],
+  "i18n-ally.localesPaths": "src/locale",
+  "i18n-ally.regex.key": ".*?",
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.keysInUse": ["date.long.*", "yeah"]
+}

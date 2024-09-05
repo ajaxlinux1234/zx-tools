@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["./rollup.config.ts", "./rollup.dts.config.ts", "scripts"],
+  "compilerOptions": {
+    "target": "esnext",
+    "esModuleInterop": true,
+    "declaration": false,
+    "resolveJsonModule": true
+  }
+}

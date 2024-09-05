@@ -1,0 +1,123 @@
+{
+  "name": "zx-dev-tools",
+  "version": "1.0.46",
+  "type": "module",
+  "description": "A collection of common tools developed using zx.js",
+  "keywords": [
+    "zx-dev-tools",
+    "dev-tools",
+    "auto reload docker image"
+  ],
+  "homepage": "https://registry.npmjs.org/zx-dev-tools",
+  "bugs": {
+    "url": "https://github.com/ajaxlinux1234/zx-tools/issues"
+  },
+  "bin": {
+    "zx-tools": "./packages/zx-dev-tools/bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaxlinux1234/zx-tools.git"
+  },
+  "funding": "https://github.com/sponsors/ajaxlinux1234",
+  "license": "ISC",
+  "author": "",
+  "main": "index.mjs",
+  "scripts": {
+    "build": "pnpm -r --filter='./packages/*' run build",
+    "lint": "eslint . && stylelint \"**/*.{css,less,scss}\"",
+    "lint:fix": "prettier --write . && eslint --fix . && stylelint --fix \"**/*.{css,less,scss}\"",
+    "prepare": "husky install",
+    "p": "pnpm build && npm publish"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false"
+  },
+  "commitlint": {
+    "extends": [
+      "ali"
+    ]
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ],
+    "lib/*.mjs": [
+      "eslint --cache --fix"
+    ],
+    "*.{cjs,cts,js,jsx,mjs,mts,ts,tsx,vue}": "eslint --fix",
+    "*.{css,less,scss}": "stylelint --fix",
+    "*.{cjs,css,cts,html,js,json,jsx,less,md,mjs,mts,scss,ts,tsx,vue,yaml,yml}": "prettier --write"
+  },
+  "prettier": "prettier-config-ali",
+  "eslintConfig": {
+    "extends": [
+      "ali/typescript/node",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-ali",
+      "stylelint-prettier/recommended"
+    ]
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "zx": "^8.1.3",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@eslint/js": "^9.7.0",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__preset-env": "^7.9.7",
+    "@types/convert-source-map": "^2.0.3",
+    "@types/cross-spawn": "^6.0.6",
+    "@types/debug": "^4.1.12",
+    "@types/estree": "^1.0.5",
+    "@types/etag": "^1.8.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/less": "^3.0.6",
+    "@types/micromatch": "^4.0.9",
+    "@types/node": "^20.14.10",
+    "@types/picomatch": "^3.0.0",
+    "@types/stylus": "^0.48.42",
+    "@types/ws": "^8.5.11",
+    "@vitejs/release-scripts": "^1.3.1",
+    "commitlint-config-ali": "^1.0.0",
+    "conventional-changelog-cli": "^5.0.0",
+    "esbuild": "^0.23.0",
+    "eslint": "^8.56.0",
+    "eslint-config-ali": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import-x": "^3.0.1",
+    "eslint-plugin-n": "^17.9.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-regexp": "^2.6.0",
+    "execa": "^9.3.0",
+    "fs-extra": "^11.2.0",
+    "globals": "^15.8.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.7",
+    "npm-run-all2": "^6.2.2",
+    "picocolors": "^1.0.1",
+    "prettier": "3.3.3",
+    "prettier-config-ali": "^1.0.0",
+    "rimraf": "^5.0.9",
+    "rollup": "^4.13.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "simple-git-hooks": "^2.11.1",
+    "stylelint": "^16.0.2",
+    "stylelint-config-ali": "^2.1.0",
+    "stylelint-prettier": "^5.0.0",
+    "tslib": "^2.6.3",
+    "tsx": "^4.16.2",
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^7.16.1"
+  },
+  "packageManager": "pnpm@9.4.0",
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  }
+}
